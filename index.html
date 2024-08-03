@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/ba31d2e541.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav class="con">
+            
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i> 
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi,I'm Barath<br> <h1><span>Software Developer</span></h1></h1>
+        </div>
+    </div>
+</div>
+<!------------about----------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user1.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Passionate software developer with expertise in full stack development, specializing in Java, JavaScript, and modern web technologies. Adept at designing and implementing robust, scalable applications with a keen eye for user experience and performance optimization.Committed to delivering high-quality code and designing and implementing robust, scalable applications with a keen eye for user experience and performance optimization.  </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span><h2>Frontend Development :</h2></span><br>HTML5, CSS3, JAVASCRIPT, REACT.JS</li>
+                        <li><span><h2>Backend Development :</h2></span><br>JAVA, SPRINGBOOT, NODE.JS</li>
+                        <li><span><h2>Database :</h2></span><br>MYSQL, POSTGRESQL</li>
+                        <li><span><h2>Additional Skills :</h2></span><br>Agile Methodologies: SCRUM, Version Control System: GIT, GITHUB</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span><h1>Web Developer Intern(Jan 2024 - Feb 2024)</h1></span><br>Developed a comprehensive e-commerce website as a web developer intern, utilizing HTML, CSS, JavaScript, and backend technologies. Implemented key features such as user authentication, product listings, shopping cart, and secure checkout. Focused on creating a responsive, user-friendly interface with seamless navigation. </li>
+                        <li><span><h1>Front-End Development Intern(Mar 2024 - Apr 2024)</h1></span><br>Developed a visually appealing restaurant website as a front-end developer intern, using HTML, CSS, and JavaScript. Implemented features including a menu display, reservation system, and interactive gallery. Prioritized responsive design and optimized performance for a seamless experience across various devices. Demonstrated strong skills in front-end technologies and a keen eye for aesthetic and functional design.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span><h1>Bachelors in Information Technology</h1></span><br>Arunai Engineering College,Anna University.<br>Tiruvannamalai,Tamilnadu. <br>July 2020 - June 2024</li>
+                        <li><span><h1>Higher Secondary</h1></span><br>Oxford Matriculation Higher Secondary School. <br>Polur,Tamilnadu. <br> Jun 2018 - Apr 2020</li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+    </div>
+</div>
+</div>
+<!------------services--------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Good web design combines creativity and functionality, aiming to create an engaging and intuitive interface that effectively communicates the website's purpose.Web designers utilize various tools and technologies such as graphic design software, coding languages like HTML, CSS, and JavaScript to bring their designs to life. </p>
+                
+            </div> 
+            <div>
+                <i class="fa-solid fa-crop-simple"></i> 
+                <h2>UI/UX Design</h2>
+                <p> Transforming user experiences through intuitive design. We combine human-centered design principles with cutting-edge technology to create engaging and user-friendly interfaces. From concept to launch, our UI/UX design services ensure a seamless and memorable user journey.</p>
+                
+            </div>  
+            <div>
+                <i class="fa-solid fa-robot"></i>
+                <h2>Software Development</h2>
+                <p> Developed an AI-powered attendance maintenance system to automate and streamline the process of tracking and managing attendance. Utilized computer vision and machine learning algorithms to accurately recognize and record attendance in real-time. Implemented a user-friendly interface for easy access and reporting. Enhanced efficiency and accuracy, reducing manual errors and saving time.</p>
+                
+            </div>    
+        </div>
+
+    </div>
+</div>
+<!------------------portfolio----------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1><br>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work1.png" >
+                <div class="layer">
+                    <h3>Inventory Management Systems (IMS)</h3>
+                    <p>Developed a robust Inventory Management System using Java to efficiently track and manage products, suppliers, and transactions. Implemented features like real-time stock tracking, user authentication, and comprehensive reporting. Utilized MySQL for database management and Java Swing/JavaFX for a user-friendly interface.</p>
+                </div>
+            </div> 
+            <div class="work">
+                <img src="images/work2.png">
+                <div class="layer">
+                    <h3>Attendance maintenance system using ai</h3>
+                    <p>An AI system which maintains a automated attendance in workplaces and
+                    schools to monitor the employees and students.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work3.jpg">
+                <div class="layer">
+                    <h3>E-Commerce Website</h3>
+                    <p>Developed a fully functional e-commerce website from scratch, allowing users to browse and purchase products with ease. Implemented features such as user authentication, cart management, and secure payment processing.</p>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+<!-------------contact---------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>baraths259@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>7708516799</p>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100026143090701"><i class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://twitter.com/Barath1239659"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/the_.skyliner/"><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://linkedin.com/in/Barath0102"><i class="fa-brands fa-linkedin"></i></a>
+                </div><br>   
+                <a href="images/Barath_Resume.pdf" download target=_blank class="btn btn2">DOWNLOAD CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">SUBMIT</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Barath.Made  <i class="fa-solid fa-heart"></i> by Web Developer </p>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+
+</script>
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyJd3sh0-zdOB_QqQkttEGj6Onq9miMfX0QhEuJUrFZEV5Pson35ntxe6mQZC_U2iVw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Form submitted successfully"
+            setTimeout(function(){
+                msg.innerHTML = "";
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script> 
+</body>    
+</html>
