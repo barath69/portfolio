@@ -12,19 +12,20 @@
 <div id="header">
     <div class="container">
         <nav class="con">
-            
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i> 
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
+			<ul id="sidemenu">
+				<li><a href="#header">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#portfolio">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<i class="fa-regular fa-circle-xmark" id="close-icon" onclick="closemenu()"></i>
+			<i class="fa-solid fa-bars" id="menu-icon" onclick="openmenu()"></i>
+		</nav>
+
         <div class="header-text">
-            <h1>Hi,I'm Barath<br> <h1><span>Software Engineer @ Memko Systems Pvt Ltd</span></h1></h1>
+            <h1>Hi, I'm Barath</h1>
+			<h2><span>Software Engineer @ Memko Systems</span></h2>
         </div>
     </div>
 </div>
@@ -191,31 +192,39 @@
 
 
 <script>
-  const scriptURL = "https://script.google.com/macros/s/AKfycbwq-AUAS_MDyrcB-LVGcBkbRgY2AYx16R00jVChJYnGlo304XZtuVZVXQXmO6cHCCOj/exec";
-  const form = document.forms['submit-to-google-sheet'];
-  const msg = document.getElementById("msg");
+const scriptURL = "https://script.google.com/macros/s/AKfycbwpS-mH215jaZosSE2fvivv_gjeFrjhvunezr_-yudM5cRjMW3kcQopK4SoCAZ9YrYW/exec";
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
+form.addEventListener('submit', e => {
+  e.preventDefault();
 
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value
-    };
+  const data = {
+    name: form.Name.value,
+    email: form.Email.value,
+    message: form.Message.value
+  };
 
-    fetch(scriptURL, {
-      method: 'POST',
-      body: JSON.stringify(data)
-    })
-    .then(response => {
-      msg.innerHTML = "Form submitted successfully!";
-      setTimeout(() => msg.innerHTML = "", 4000);
-      form.reset();
-    })
-    .catch(error => console.error('Error!', error));
+  fetch(scriptURL, {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    msg.innerHTML = "Form submitted successfully!";
+    setTimeout(() => msg.innerHTML = "", 4000);
+    form.reset();
+  })
+  .catch(err => {
+    console.error("Error:", err);
+    msg.innerHTML = "Submission failed!";
   });
+});
 </script>
+
+
 
 </body>    
 </html>
