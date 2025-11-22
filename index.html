@@ -24,7 +24,7 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <h1>Hi,I'm Barath<br> <h1><span>Software Engineer</span></h1></h1>
+            <h1>Hi,I'm Barath<br> <h1><span>Software Engineer @ Memko Systems Pvt Ltd</span></h1></h1>
         </div>
     </div>
 </div>
@@ -37,7 +37,7 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>Passionate software Engineer with expertise in full stack development, specializing in Java, JavaScript, and modern web technologies. Adept at designing and implementing robust, scalable applications with a keen eye for user experience and performance optimization.Committed to delivering high-quality code and designing and implementing robust, scalable applications with a keen eye for user experience and performance optimization.  </p>
+                <p>I’m a Software Engineer specializing in 3DEXPERIENCE ENOVIA PLM customization and upgrade, working extensively with Java, MQL, and UWA. I focus on building robust PLM customizations, developing JPOs/UI components, and performing schema/data model upgrades across versions. I also have a strong foundation in Java Full Stack development, with hands-on skills in Servlets, JSP, JDBC, HTML, CSS, and JavaScript. I’m passionate about clean engineering, solving complex system problems, and continuously improving my technical expertise.</p>
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -46,15 +46,15 @@
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li><span><h2>Frontend Development :</h2></span><br>HTML5, CSS3, JAVASCRIPT,</li>
-                        <li><span><h2>Backend Development :</h2></span><br>JAVA,J2EE,Hibernate</li>
-                        <li><span><h2>Database :</h2></span><br>MYSQL, POSTGRESQL</li>
+                        <li><span><h2>Backend Development :</h2></span><br>JAVA,J2EE,Hibernate,TCL,UWA</li>
+                        <li><span><h2>Database :</h2></span><br>MYSQL, POSTGRESQL,MQL</li>
                         <li><span><h2>Additional Skills :</h2></span><br>Agile Methodologies: SCRUM, Version Control System: GIT, GITHUB</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span><h1>Web Developer Intern(Jan 2024 - Feb 2024)</h1></span><br>Developed a comprehensive e-commerce website as a web developer intern, utilizing HTML, CSS, JavaScript, and backend technologies. Implemented key features such as user authentication, product listings, shopping cart, and secure checkout. Focused on creating a responsive, user-friendly interface with seamless navigation. </li>
-                        <li><span><h1>Front-End Development Intern(Mar 2024 - Apr 2024)</h1></span><br>Developed a visually appealing restaurant website as a front-end developer intern, using HTML, CSS, and JavaScript. Implemented features including a menu display, reservation system, and interactive gallery. Prioritized responsive design and optimized performance for a seamless experience across various devices. Demonstrated strong skills in front-end technologies and a keen eye for aesthetic and functional design.</li>
+                        <li><span><h1>Software Engineer(Jan 2025 - Present)</h1></span><br>Working on customization and development of ENOVIA 3DEXPERIENCE PLM applications using Java, MQL, and UWA frameworks.Optimizing PLM performance and ensuring smooth deployment of custom solutions in real-time environments.Performing upgrade activities including schema migration, MQL cleanup, object type/policy alignment, and resolving compatibility issues between major 3DEXPERIENCE versions. </li>
+                        <li><span><h1>Java Full Stack Developer Intern(July 2024 - Dec 2024)</h1></span><br>Underwent intensive training in Core Java, OOP concepts, Collections, Multithreading, Exception Handling, JDBC, Servlets, and JSP as part of a structured 6-month full-stack program. Practiced front-end development using HTML, CSS, JavaScript, and improved UI/UX fundamentals through regular coding exercises and assignments.</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
@@ -141,7 +141,7 @@
                     <a target="_blank" href="https://www.instagram.com/the_.skyliner/"><i class="fa-brands fa-instagram"></i></a>
                     <a target="_blank" href="https://linkedin.com/in/Barath0102"><i class="fa-brands fa-linkedin"></i></a>
                 </div><br>   
-                <a href="https://drive.google.com/uc?export=download&id=1oEhMw_oWQpyir_zzqmZ54fm0JQNkzIh9" download="Barath_resume.pdf" target="_blank" class="btn btn2">DOWNLOAD CV</a>
+                <a href="images/Barath_resume.pdf" download="Barath_resume.pdf" target="_blank" class="btn btn2">DOWNLOAD CV</a>
 
             </div>
             <div class="contact-right">
@@ -156,7 +156,7 @@
         </div>
     </div>
     <div class="copyright">
-        <p>Copyright @ Barath.Made  <i class="fa-solid fa-heart"></i> by Web Developer </p>
+        <p>Copyright @ Barath.Made  <i class="fa-solid fa-heart"></i> by Software Engineer </p>
     </div>
 </div>
 
@@ -190,22 +190,32 @@
 </script>
 
 
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyJd3sh0-zdOB_QqQkttEGj6Onq9miMfX0QhEuJUrFZEV5Pson35ntxe6mQZC_U2iVw/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Form submitted successfully"
-            setTimeout(function(){
-                msg.innerHTML = "";
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwq-AUAS_MDyrcB-LVGcBkbRgY2AYx16R00jVChJYnGlo304XZtuVZVXQXmO6cHCCOj/exec";
+  const form = document.forms['Portfolio Contact Form'];
+  const msg = document.getElementById("msg");
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value
+    };
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify(data)
     })
-  </script> 
+    .then(response => {
+      msg.innerHTML = "Form submitted successfully!";
+      setTimeout(() => msg.innerHTML = "", 4000);
+      form.reset();
+    })
+    .catch(error => console.error('Error!', error));
+  });
+</script>
+
 </body>    
 </html>
